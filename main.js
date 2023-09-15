@@ -5,9 +5,9 @@ var ajaxCall = (key, url, prompt) => {
       type: "POST",
       dataType: "json",
       data: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: prompt,
-        max_tokens: 4097,
+        model: "text-davinci-002",
+        prompt: prompt,
+        max_tokens: 1024,
         n: 1,
         temperature: 0.5,
       }),
@@ -28,7 +28,7 @@ var ajaxCall = (key, url, prompt) => {
   });
 };
 
-const url = "https://api.openai.com/v1/chat";
+const url = "https://api.openai.com/v1";
 
 (function () {
   const template = document.createElement("template");
