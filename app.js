@@ -13,7 +13,7 @@ var ajaxCall = (key, url, messages) => {
       },
       {
         "role": "user",
-        "content": prompt
+        "content": messages
       }
     ],
         max_tokens: 1024,
